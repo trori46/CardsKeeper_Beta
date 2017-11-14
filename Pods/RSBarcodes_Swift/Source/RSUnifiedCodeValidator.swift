@@ -14,6 +14,35 @@ open class RSUnifiedCodeValidator {
         return UnifiedCodeValidatorSharedInstance
     }
     
+    open func stringValidtoImage(barCode: String )-> UIImage{
+        var barCodeImage: UIImage?
+        
+        if RSUnifiedCodeValidator.shared.isValid(barCode, machineReadableCodeObjectType: AVMetadataObject.ObjectType.ean13.rawValue)
+        {
+            barCodeImage = RSUnifiedCodeGenerator.shared.generateCode(barCode, machineReadableCodeObjectType: AVMetadataObject.ObjectType.ean13.rawValue )
+            return barCodeImage!
+        } else if RSUnifiedCodeValidator.shared.isValid(barCode, machineReadableCodeObjectType: AVMetadataObject.ObjectType.code128.rawValue) {
+            barCodeImage = RSUnifiedCodeGenerator.shared.generateCode(barCode, machineReadableCodeObjectType: AVMetadataObject.ObjectType.code128.rawValue)
+            return barCodeImage!
+        } else if RSUnifiedCodeValidator.shared.isValid(barCode, machineReadableCodeObjectType: AVMetadataObject.ObjectType.code39Mod43.rawValue) {
+            barCodeImage = RSUnifiedCodeGenerator.shared.generateCode(barCode, machineReadableCodeObjectType: AVMetadataObject.ObjectType.code39Mod43.rawValue)
+            return barCodeImage!
+        } else if RSUnifiedCodeValidator.shared.isValid(barCode, machineReadableCodeObjectType: AVMetadataObject.ObjectType.ean8.rawValue) {
+            barCodeImage = RSUnifiedCodeGenerator.shared.generateCode(barCode, machineReadableCodeObjectType: AVMetadataObject.ObjectType.ean8.rawValue)
+            return barCodeImage!
+        } else if RSUnifiedCodeValidator.shared.isValid(barCode, machineReadableCodeObjectType: AVMetadataObject.ObjectType.ean8.rawValue) {
+            barCodeImage = RSUnifiedCodeGenerator.shared.generateCode(barCode, machineReadableCodeObjectType: AVMetadataObject.ObjectType.ean8.rawValue)
+            return barCodeImage!
+        } else if RSUnifiedCodeValidator.shared.isValid(barCode, machineReadableCodeObjectType: AVMetadataObject.ObjectType.code39.rawValue) {
+            barCodeImage = RSUnifiedCodeGenerator.shared.generateCode(barCode, machineReadableCodeObjectType: AVMetadataObject.ObjectType.code39.rawValue)
+            return barCodeImage!
+        } else {
+            return barCodeImage!
+            
+        }
+    }
+    
+    
     open func isValid(_ contents:String, machineReadableCodeObjectType: String) -> Bool {
         var codeGenerator: RSCodeGenerator?
         switch machineReadableCodeObjectType {

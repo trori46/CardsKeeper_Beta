@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		08CB9899C74A45682E700087 /* Pods_CardsKeeperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBE4ABB6706448A654ADEE77 /* Pods_CardsKeeperUITests.framework */; };
 		0A6A493E051D48B37729058C /* Pods_viewsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C885579142CCA5AD25EE52 /* Pods_viewsTests.framework */; };
+		52207C771FBB06FF00F783F6 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52207C761FBB06FF00F783F6 /* FileManager.swift */; };
 		5255EB291FA34169009A2AA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255EB281FA34169009A2AA2 /* AppDelegate.swift */; };
 		5255EB2E1FA34169009A2AA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5255EB2C1FA34169009A2AA2 /* Main.storyboard */; };
 		5255EB311FA34169009A2AA2 /* views.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5255EB2F1FA34169009A2AA2 /* views.xcdatamodeld */; };
@@ -54,6 +55,7 @@
 		1DCC8723A9DEFA50F77CA7B3 /* Pods-CardsKeeper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardsKeeper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardsKeeper/Pods-CardsKeeper.debug.xcconfig"; sourceTree = "<group>"; };
 		2B6698AC6766B0A5BC49B929 /* Pods-CardsKeeperUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardsKeeperUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardsKeeperUITests/Pods-CardsKeeperUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		35F8AC8386D01E24AF16B8C1 /* Pods-CardsKeeper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardsKeeper.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardsKeeper/Pods-CardsKeeper.release.xcconfig"; sourceTree = "<group>"; };
+		52207C761FBB06FF00F783F6 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		5255EB251FA34169009A2AA2 /* CardsKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardsKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5255EB281FA34169009A2AA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5255EB2D1FA34169009A2AA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				52CF94791FB5EE5A005E7CAC /* ShittyImageCropVC.swift */,
 				524E4D351FB36BDC0046FBD4 /* PageView */,
 				52B381471FBA0FFF00D68518 /* Authorization.swift */,
+				52207C761FBB06FF00F783F6 /* FileManager.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 				5255EB311FA34169009A2AA2 /* views.xcdatamodeld in Sources */,
 				52DBB0C41FB4B3E000DE53D8 /* Popover.swift in Sources */,
 				52B8A35F1FA35421003B3E5C /* AddViewController.swift in Sources */,
+				52207C771FBB06FF00F783F6 /* FileManager.swift in Sources */,
 				5255EB291FA34169009A2AA2 /* AppDelegate.swift in Sources */,
 				52B381481FBA0FFF00D68518 /* Authorization.swift in Sources */,
 				52A74A1F1FA730D400D6987B /* ManagerCards.swift in Sources */,

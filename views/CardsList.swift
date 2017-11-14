@@ -35,7 +35,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     var cardsManager = ManagerCards()
-   
+   var fileManager = FileManager()
     var cardArray:[Card] = []
 
     var filter: String = ""
@@ -158,7 +158,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
          let share =  UIContextualAction(style: .normal, title: "", handler: { (action,view,completionHandler ) in
             let card = self.cardArray[indexPath.row]
-            let activityVc = UIActivityViewController(activityItems: [card.title, card.description, self.loadImageFromPath(date: card.created)!], applicationActivities: nil)
+            let activityVc = UIActivityViewController(activityItems: [card.title, card.description, self.fileManager.loadImageFromPath(date: card.created, count: 1)!], applicationActivities: nil)
             activityVc.popoverPresentationController?.sourceView = self.view
 
             self.present(activityVc, animated: true, completion: nil)
@@ -190,19 +190,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return confrigation
     }
     
-  
-    func loadImageFromPath( date: Date) -> UIImage? {
-        let documentDirectoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString
-                let pathURL = URL(fileURLWithPath: documentDirectoryPath.appendingPathComponent("\(date).jpg"))
-        do {
-            let imageData = try Data(contentsOf: pathURL)
-            return UIImage(data: imageData)
-        } catch {
-            print(error.localizedDescription)
-        }
-        return nil
-    }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
         let name = cardArray[indexPath.row]
@@ -210,12 +198,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.filter.text = name.filter
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
-        // populate the data in your cell as desired
         cell.titleLabel.text = name.title
         cell.descriptionLabel.text = name.descriptionCard
             let dateFormat = dateFormatter.string(from: name.created as Date)
             cell.date.text = dateFormat
-        cell.frontImage!.image = loadImageFromPath( date: name.created as Date)
+        cell.frontImage!.image = fileManager.loadImageFromPath( date: name.created as Date, count: 1)
         
         // Configure the cell...
         return cell

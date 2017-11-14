@@ -13,38 +13,24 @@ import AVFoundation
 import QuartzCore
 
 
-class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,  ShittyDelegate{
+class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,  ShittyDelegate {
     var cardsManager = ManagerCards()
     var imageString = ""
     let createdval = Date()
     var cardEditting : Card?
-   
+    var fileManager = FileManager()
     @IBOutlet weak var barCode: UIImageView!
     @IBOutlet weak var titleCard: UITextField!
     @IBOutlet weak var descriptionCard: UITextField!
     @IBOutlet weak var barCodeString: UITextField!
-    
     @IBOutlet weak var roundButton: UIButton!
     @IBOutlet weak var roundButton1: UIButton!
     
     @IBAction func generateBarCode(_ sender: UIButton) {
        
         let barCode: String = barCodeString.text!
-        
-        if RSUnifiedCodeValidator.shared.isValid(barCode, machineReadableCodeObjectType: AVMetadataObject.ObjectType.ean13.rawValue)
-            {
-                self.barCode?.image = RSUnifiedCodeGenerator.shared.generateCode(barCode, machineReadableCodeObjectType: AVMetadataObject.ObjectType.ean13.rawValue )
-        } else if RSUnifiedCodeValidator.shared.isValid(barCode, machineReadableCodeObjectType: AVMetadataObject.ObjectType.code128.rawValue) {
-            self.barCode?.image = RSUnifiedCodeGenerator.shared.generateCode(barCode, machineReadableCodeObjectType: AVMetadataObject.ObjectType.code128.rawValue)
-        } else if RSUnifiedCodeValidator.shared.isValid(barCode, machineReadableCodeObjectType: AVMetadataObject.ObjectType.code39Mod43.rawValue) {
-            self.barCode?.image = RSUnifiedCodeGenerator.shared.generateCode(barCode, machineReadableCodeObjectType: AVMetadataObject.ObjectType.code39Mod43.rawValue)
-        } else if RSUnifiedCodeValidator.shared.isValid(barCode, machineReadableCodeObjectType: AVMetadataObject.ObjectType.ean8.rawValue) {
-            self.barCode?.image = RSUnifiedCodeGenerator.shared.generateCode(barCode, machineReadableCodeObjectType: AVMetadataObject.ObjectType.ean8.rawValue)
-        } else if RSUnifiedCodeValidator.shared.isValid(barCode, machineReadableCodeObjectType: AVMetadataObject.ObjectType.ean8.rawValue) {
-            self.barCode?.image = RSUnifiedCodeGenerator.shared.generateCode(barCode, machineReadableCodeObjectType: AVMetadataObject.ObjectType.ean8.rawValue)
-        } else if RSUnifiedCodeValidator.shared.isValid(barCode, machineReadableCodeObjectType: AVMetadataObject.ObjectType.code39.rawValue) {
-            self.barCode?.image = RSUnifiedCodeGenerator.shared.generateCode(barCode, machineReadableCodeObjectType: AVMetadataObject.ObjectType.code39.rawValue)
-        }
+        self.barCode?.image = RSUnifiedCodeValidator.shared.stringValidtoImage(barCode: barCode)
+
         imageCount = 3
 
         }
@@ -93,8 +79,6 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
             imagePicker.sourceType = UIImagePickerControllerSourceType.camera
             imagePicker.allowsEditing = false
             
-            //imagePicker.resizableCropArea = true
-//            UIImagePickerControllerCropRect(CGRect(x: 0, y: 30, width: 300, height: 100))
             self.present(imagePicker, animated: true, completion: nil)
         }
         else
@@ -147,50 +131,13 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
         self.dismiss(animated: true, completion: nil)
     }
     
-    func addToUrl(_ photo: UIImage, imageCount: Int) -> String {
-        let documentDirectoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString
-        if imageCount == 1 {
-            let imgPath = URL(fileURLWithPath: documentDirectoryPath.appendingPathComponent("\(createdval).jpg"))
-            imageString = String(describing: imgPath)
-            do{
-                try UIImageJPEGRepresentation(photo, 1.0)?.write(to: imgPath, options: .atomic)
-            } catch let error {
-                print(error.localizedDescription)
-            }
-             return imageString
-        } else if imageCount == 2 {
-            let imgPath = URL(fileURLWithPath: documentDirectoryPath.appendingPathComponent("\(createdval)_2.jpg"))
-            imageString = String(describing: imgPath)
-            do{
-                try UIImageJPEGRepresentation(photo, 1.0)?.write(to: imgPath, options: .atomic)
-            } catch let error {
-                print(error.localizedDescription)
-            }
-             return imageString
-        } else if imageCount == 3 {
-            let imgPath = URL(fileURLWithPath: documentDirectoryPath.appendingPathComponent("\(createdval)_3.jpg"))
-            imageString = String(describing: imgPath)
-            print(imageString)
-            do{
-                try UIImageJPEGRepresentation(photo, 1.0)?.write(to: imgPath, options: .atomic)
-            } catch let error {
-                print(error.localizedDescription)
-            }
-             return imageString
-        }
-        else {
-            let imageString = ""
-            return imageString
-        }
-       
-    }
-    
+
    
     @IBAction func createCard(_ sender: UIButton) {
         if titleCard?.text != "" && descriptionCard?.text != "" {
-                let cardFrontImage = addToUrl((fronImage?.image)!, imageCount: 1)
-                let cardBackImage = addToUrl((backImage?.image)!, imageCount: 2)
-                let barCode = addToUrl((self.barCode?.image)!, imageCount: 3)
+            let cardFrontImage = fileManager.addToUrl((fronImage?.image)!, imageCount: 1, create: createdval)
+                let cardBackImage = fileManager.addToUrl((backImage?.image)!, imageCount: 2, create: createdval)
+            let barCode = fileManager.addToUrl((self.barCode?.image)!, imageCount: 3, create: createdval)
 
             var filter : String = ""
             if segment.selectedSegmentIndex == 0 {
@@ -220,27 +167,7 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
         }
     }
     
-    func loadImageFromPath( date: Date, count: Int) -> UIImage? {
-        let documentDirectoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString
-        var pathURL: URL!
-        if count == 1 {
-        pathURL = URL(fileURLWithPath: documentDirectoryPath.appendingPathComponent("\(date).jpg"))
-        }else if count == 2 {
-            pathURL = URL(fileURLWithPath: documentDirectoryPath.appendingPathComponent("\(date)_2.jpg"))
-        }else if count == 3 {
-            pathURL = URL(fileURLWithPath: documentDirectoryPath.appendingPathComponent("\(date)_3.jpg"))
-        }
-        do {
-            let imageData = try Data(contentsOf: pathURL)
-            return UIImage(data: imageData)
-        } catch {
-            print(error.localizedDescription)
-        }
-        
-        return nil
-    }
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     roundButton.layer.cornerRadius = 10
@@ -255,9 +182,9 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
         if cardEditting != nil {
             titleCard!.text = cardEditting?.title
             descriptionCard.text = cardEditting?.descriptionCard
-            fronImage.image = loadImageFromPath(date: (cardEditting?.created)!, count: 1)
-            backImage.image = loadImageFromPath(date: (cardEditting?.created)!, count: 2)
-            barCode.image = loadImageFromPath(date: (cardEditting?.created)!, count: 3)
+            fronImage.image = fileManager.loadImageFromPath(date: (cardEditting?.created)!, count: 1)
+            backImage.image = fileManager.loadImageFromPath(date: (cardEditting?.created)!, count: 2)
+            barCode.image = fileManager.loadImageFromPath(date: (cardEditting?.created)!, count: 3)
         }
         // Do any additional setup after loading the view.
 //        choose()
@@ -269,29 +196,8 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
-//extension UIImage
-//{
-//    // convenience function in UIImage extension to resize a given image
-//    func convert(toSize size:CGSize, scale:CGFloat) ->UIImage
-//    {
-//        let imgRect = CGRect(origin: CGPoint(x:0.0, y:0.0), size: size)
-//        UIGraphicsBeginImageContextWithOptions(size, false, scale)
-//        self.draw(in: imgRect)
-//        let copied = UIGraphicsGetImageFromCurrentImageContext()
-//        UIGraphicsEndImageContext()
-//        
-//        return copied!
-//    }
-//}
+
 

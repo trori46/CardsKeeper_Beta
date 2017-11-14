@@ -82,7 +82,16 @@
                                                 <segue destination="1gY-Ar-3Pe" kind="showDetail" id="igQ-B2-h8x"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="edit" id="T6q-a7-F6y"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Edit" style="plain" id="oeX-Oy-BaP">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DsQ-qu-JJP">
+                                                <rect key="frame" x="274" y="7" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Edit"/>
+                                                <connections>
+                                                    <action selector="editting:" destination="cmv-jq-2DN" eventType="touchUpInside" id="eLz-Dy-uWA"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>

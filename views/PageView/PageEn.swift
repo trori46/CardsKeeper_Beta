@@ -9,11 +9,7 @@ import UIKit
 
 class pageenabled: UIViewController,UIScrollViewDelegate
 {
-   
-//    @IBAction func edit(_ sender: Any) {
-//        performSegue(withIdentifier: "Edit", sender: cardArray)
-//    }
-    
+
     @IBAction func editting(_ sender: UIButton) {
        goToEditting()
     }
@@ -23,9 +19,8 @@ class pageenabled: UIViewController,UIScrollViewDelegate
     var imagelist = 3
     var scrollView = UIScrollView()
     var cardArray : Card?
-    //var navigate = UINavigationBar()
-    //var tool = UIToolbar()
-    
+    var fileManager = FileManager()
+ 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "Edit"){
             let editingController = segue.destination as? AddViewController
@@ -33,26 +28,7 @@ class pageenabled: UIViewController,UIScrollViewDelegate
         }
     }
     @IBOutlet weak var pageControl: UIPageControl!
-    
-    func loadImageFromPath( date: Date, count: Int) -> UIImage? {
-        let documentDirectoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString
-        var pathURL: URL!
-        if count == 1 {
-            pathURL = URL(fileURLWithPath: documentDirectoryPath.appendingPathComponent("\(date).jpg"))
-        }else if count == 2 {
-            pathURL = URL(fileURLWithPath: documentDirectoryPath.appendingPathComponent("\(date)_2.jpg"))
-        }else if count == 3 {
-            pathURL = URL(fileURLWithPath: documentDirectoryPath.appendingPathComponent("\(date)_3.jpg"))
-        }
-        do {
-            let imageData = try Data(contentsOf: pathURL)
-            return UIImage(data: imageData)
-        } catch {
-            print(error.localizedDescription)
-        }
-        
-        return nil
-    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -73,7 +49,7 @@ class pageenabled: UIViewController,UIScrollViewDelegate
             
             let myImageView:UIImageView = UIImageView()
             myImageView.transform = myImageView.transform.rotated(by: CGFloat((Double.pi / 2) * -1))
-            myImageView.image = loadImageFromPath(date: (cardArray?.created)!, count: i+1)
+            myImageView.image = fileManager.loadImageFromPath(date: (cardArray?.created)!, count: i+1)
             myImageView.contentMode = UIViewContentMode.scaleAspectFit
             myImageView.frame = frame
             
@@ -82,9 +58,7 @@ class pageenabled: UIViewController,UIScrollViewDelegate
         
        
         
-//        func goBack(){
-//            dismiss(animated: true, completion: nil)
-//        }
+
         self.scrollView.contentSize = CGSize(width: self.scrollView.frame.size.width * CGFloat(imagelist), height: self.scrollView.frame.size.height)
         pageControl.addTarget(self, action: Selector(("changePage:")), for: UIControlEvents.valueChanged)
         // Do any additional setup after loading the view.
