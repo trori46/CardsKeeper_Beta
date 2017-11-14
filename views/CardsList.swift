@@ -110,7 +110,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "pageenabled"){
             let detailController = segue.destination as? pageenabled
-            detailController?.imagelist = sender as! [String]
+            detailController?.cardArray = sender as? Card
         } else if (segue.identifier == "popover"){
             let des = segue.destination as! Popover
             des.delegate = self
@@ -222,11 +222,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-    let name = cardArray[indexPath.row]
-    let str = name.created
-    let pageImages = ["\(str).jpg","\(str)_2.jpg","\(str)_3.jpg"]
     
-        performSegue(withIdentifier: "pageenabled", sender: pageImages)
+    
+        performSegue(withIdentifier: "pageenabled", sender: cardArray[indexPath.row])
         
     }
     
