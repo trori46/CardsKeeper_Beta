@@ -33,6 +33,22 @@ class ShittyImageCropVC: UIViewController, UIScrollViewDelegate  {
     
   }
     
+    func fixOrientation(img:UIImage) -> UIImage {
+        
+        if (img.imageOrientation == UIImageOrientation.up) {
+            return img;
+        }
+        
+        UIGraphicsBeginImageContextWithOptions(img.size, false, img.scale);
+        let rect = CGRect(x: 0, y: 0, width: img.size.width, height: img.size.height)
+        img.draw(in: rect)
+        
+        let normalizedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext();
+        return normalizedImage;
+        
+    }
+    
     func setupView(img :UIImage) {
     closeButton = UIButton(frame: CGRect(x: 40, y: view.frame.height - 40 - 90, width: 90, height: 90))
     closeButton.setImage(UIImage(named: "crop-back"), for: .normal)
@@ -110,9 +126,9 @@ class ShittyImageCropVC: UIViewController, UIScrollViewDelegate  {
     let imgH = holeRect.height  / scrollView.zoomScale
     
     print("IMG x: \(imgX) y: \(imgY) w: \(imgW) h: \(imgH)")
-    
+    let normalImage = fixOrientation(img: img)
     let cropRect = CGRect(x: imgX, y: imgY, width: imgW, height: imgH)
-    let imageRef = img.cgImage!.cropping(to: cropRect)
+    let imageRef = normalImage.cgImage!.cropping(to: cropRect)
         let croppedImage = UIImage(cgImage: imageRef!)
         print(croppedImage)
       // let image = UIImage(cgImage: imageRef!, scale: CGFloat(1.0), orientation: .right)

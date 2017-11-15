@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4mX-Nm-y8H">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1gY-Ar-3Pe">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,56 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Autorization-->
-        <scene sceneID="nJN-4b-ijZ">
-            <objects>
-                <viewController title="Autorization" id="4mX-Nm-y8H" customClass="AuthenticationViewController" customModule="CardsKeeper" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FDH-M2-nyk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="21c990af42eca5c94e4d311fb7fb70ba--cellphone-wallpaper-wallpaper-for-iphone" translatesAutoresizingMaskIntoConstraints="NO" id="fY1-t8-LUx">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tr1-uQ-YFB">
-                                <rect key="frame" x="45" y="207" width="229" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="LOG IN">
-                                    <color key="titleColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="loginButtonClicked:" destination="4mX-Nm-y8H" eventType="touchUpInside" id="SY0-CG-lbi"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CardsKeeper" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTW-m3-Pqq">
-                                <rect key="frame" x="78" y="106" width="164" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="Tr1-uQ-YFB" firstAttribute="leading" secondItem="nAn-LM-egp" secondAttribute="leading" constant="45" id="0nh-SW-Y6c"/>
-                            <constraint firstItem="Tr1-uQ-YFB" firstAttribute="top" secondItem="DTW-m3-Pqq" secondAttribute="bottom" constant="68" id="2wh-UV-qTN"/>
-                            <constraint firstItem="nAn-LM-egp" firstAttribute="trailing" secondItem="fY1-t8-LUx" secondAttribute="trailing" id="4kJ-en-P4D"/>
-                            <constraint firstItem="nAn-LM-egp" firstAttribute="bottom" secondItem="fY1-t8-LUx" secondAttribute="bottom" id="Hb3-7F-jFb"/>
-                            <constraint firstItem="DTW-m3-Pqq" firstAttribute="leading" secondItem="nAn-LM-egp" secondAttribute="leading" constant="78" id="Zaj-ED-42m"/>
-                            <constraint firstItem="fY1-t8-LUx" firstAttribute="leading" secondItem="nAn-LM-egp" secondAttribute="leading" id="deJ-5o-zoM"/>
-                            <constraint firstItem="Tr1-uQ-YFB" firstAttribute="centerX" secondItem="DTW-m3-Pqq" secondAttribute="centerX" id="iJq-nJ-5HB"/>
-                            <constraint firstItem="nAn-LM-egp" firstAttribute="trailing" secondItem="fY1-t8-LUx" secondAttribute="trailing" id="kGk-R8-ipo"/>
-                            <constraint firstItem="DTW-m3-Pqq" firstAttribute="top" secondItem="nAn-LM-egp" secondAttribute="top" constant="86" id="nFg-aj-t41"/>
-                            <constraint firstItem="nAn-LM-egp" firstAttribute="bottom" secondItem="fY1-t8-LUx" secondAttribute="bottom" id="oME-pB-qg1"/>
-                            <constraint firstItem="fY1-t8-LUx" firstAttribute="top" secondItem="FDH-M2-nyk" secondAttribute="top" id="oOq-Dl-T4P"/>
-                            <constraint firstItem="Tr1-uQ-YFB" firstAttribute="centerX" secondItem="fY1-t8-LUx" secondAttribute="centerX" id="spd-Ae-StZ"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="nAn-LM-egp"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uhR-7d-lLt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1653.75" y="-714.08450704225356"/>
-        </scene>
         <!--Pageenabled-->
         <scene sceneID="zbp-gH-sBk">
             <objects>
@@ -77,12 +27,12 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="CKeeper" id="bMQ-fX-Diq">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="5zH-w6-2l3">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="5zH-w6-2l3">
                                             <connections>
                                                 <segue destination="1gY-Ar-3Pe" kind="showDetail" id="igQ-B2-h8x"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Edit" style="plain" id="oeX-Oy-BaP">
+                                        <barButtonItem key="rightBarButtonItem" title="Edit" id="oeX-Oy-BaP">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DsQ-qu-JJP">
                                                 <rect key="frame" x="274" y="7" width="30" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -255,7 +205,7 @@
                                 <rect key="frame" x="0.0" y="480" width="320" height="44"/>
                                 <color key="backgroundColor" red="0.41838246247664967" green="0.064176904565964574" blue="0.23151360830141834" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
-                                    <barButtonItem style="plain" id="B1p-0P-LB2">
+                                    <barButtonItem id="B1p-0P-LB2">
                                         <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="WUu-F2-65S">
                                             <rect key="frame" x="16" y="7.5" width="288" height="29"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -294,41 +244,18 @@
                         <viewLayoutGuide key="safeArea" id="YCv-nV-Zda"/>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="eaK-Sa-oJo"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="tableView" destination="dEE-iZ-H2F" id="gI1-Om-nti"/>
-                        <segue destination="cmv-jq-2DN" kind="showDetail" identifier="pageenabled" action="showViewController:sender:" id="Xfh-8N-e8a"/>
+                        <segue destination="cmv-jq-2DN" kind="show" identifier="pageenabled" id="Xfh-8N-e8a"/>
                         <segue destination="Ugd-b4-Jyh" kind="show" identifier="editting" id="jI5-JR-NbH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2A0-Al-fBw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-921.60000000000002" y="-170.01499250374815"/>
-        </scene>
-        <!--Page View Controller-->
-        <scene sceneID="Nib-QH-lH8">
-            <objects>
-                <viewController storyboardIdentifier="PageViewController" id="tOH-8D-g90" customClass="PageViewController" customModule="CardsKeeper" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" restorationIdentifier="PageViewController" id="PNS-Lg-60Q">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="SRk-6U-Hbz">
-                                <rect key="frame" x="168" y="570" width="39" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </pageControl>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="hqi-GY-YAj"/>
-                    </view>
-                    <connections>
-                        <outlet property="pageControl" destination="SRk-6U-Hbz" id="uNl-kU-svW"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hqV-6f-XSJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-4286" y="339"/>
+            <point key="canvasLocation" x="-1039" y="-462"/>
         </scene>
         <!--Popover-->
         <scene sceneID="hwr-Gm-hlT">
@@ -399,23 +326,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="fPb-zH-ST8">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="CKeeper" id="20R-nw-Tv5">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="xd5-tA-S4w">
-                                            <connections>
-                                                <segue destination="1gY-Ar-3Pe" kind="show" id="2ke-yh-ysJ"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6b-Sn-oV4">
                                 <rect key="frame" x="0.0" y="44" width="320" height="1156"/>
                                 <subviews>
@@ -452,6 +362,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Ugd-b4-Jyh" id="oX1-3L-A2b"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hL7-Is-QNh">
                                         <rect key="frame" x="17" y="61" width="280" height="34"/>
@@ -459,6 +372,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Ugd-b4-Jyh" id="hbN-hz-svE"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ckk-BQ-a9f">
                                         <rect key="frame" x="23" y="23" width="40" height="30"/>
@@ -503,6 +419,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Ugd-b4-Jyh" id="KDY-ib-3bn"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPT-hF-dsM">
                                         <rect key="frame" x="20" y="897" width="121" height="30"/>
@@ -564,6 +483,24 @@
                                     <constraint firstItem="gtq-VC-0AT" firstAttribute="leading" secondItem="d6b-Sn-oV4" secondAttribute="leading" constant="32" id="xxc-t5-5UB"/>
                                 </constraints>
                             </scrollView>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="fPb-zH-ST8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="CKeeper" id="20R-nw-Tv5">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="xd5-tA-S4w">
+                                            <connections>
+                                                <action selector="cancel:" destination="Ugd-b4-Jyh" id="NRV-yW-V0K"/>
+                                                <segue destination="1gY-Ar-3Pe" kind="show" id="N0D-LX-ceS"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -596,11 +533,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="21c990af42eca5c94e4d311fb7fb70ba--cellphone-wallpaper-wallpaper-for-iphone" width="736" height="1309"/>
         <image name="placeholder.gif" width="800" height="492"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0ky-Xf-T6u"/>
-        <segue reference="igQ-B2-h8x"/>
+        <segue reference="jI5-JR-NbH"/>
+        <segue reference="N0D-LX-ceS"/>
     </inferredMetricsTieBreakers>
 </document>

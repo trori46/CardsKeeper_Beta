@@ -3,13 +3,14 @@ import LocalAuthentication
 
 class AuthenticationViewController: UIViewController {
   
+    
     /**
      This method gets called when the users clicks on the
      login button in the user interface.
      
      - parameter sender: a reference to the button that has been touched
      */
-    @IBAction func loginButtonClicked(_ sender: UIButton) {
+     func  authenticateUser() {
         
         // 1. Create a authentication context
         let authenticationContext = LAContext()
@@ -88,15 +89,11 @@ class AuthenticationViewController: UIViewController {
         
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alertVC.addAction(okAction)
-        
-        DispatchQueue.main.async() { () -> Void in
-            
             self.present(alertVC, animated: true, completion: nil)
-            
-        }
-        
+        self.dismiss(animated: false, completion: nil)
+
     }
-    
+  
     /**
      This method will return an error message string for the provided error code.
      The method check the error code against all cases described in the `LAError` enum.
@@ -126,11 +123,11 @@ class AuthenticationViewController: UIViewController {
         case LAError.systemCancel.rawValue:
             message = "Authentication was cancelled by the system"
             
-        case LAError.touchIDLockout.rawValue:
-            message = "Too many failed attempts."
-            
-        case LAError.touchIDNotAvailable.rawValue:
-            message = "TouchID is not available on the device"
+//        case LAError.touchIDLockout.rawValue:
+//            message = "Too many failed attempts."
+//
+//        case LAError.touchIDNotAvailable.rawValue:
+//            message = "TouchID is not available on the device"
             
         case LAError.userCancel.rawValue:
             message = "The user did cancel"
@@ -151,16 +148,7 @@ class AuthenticationViewController: UIViewController {
      This method will push the authenticated view controller onto the UINavigationController stack
      */
     func navigateToAuthenticatedViewController(){
-        
-        if let loggedInVC = storyboard?.instantiateViewController(withIdentifier: "ViewController") {
-            
-            DispatchQueue.main.async() { () -> Void in
-                
-                self.present(loggedInVC, animated: true)
-                
-            }
-            
-        }
+    
         
     }
     

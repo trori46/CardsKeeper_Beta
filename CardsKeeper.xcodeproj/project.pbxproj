@@ -10,6 +10,8 @@
 		08CB9899C74A45682E700087 /* Pods_CardsKeeperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBE4ABB6706448A654ADEE77 /* Pods_CardsKeeperUITests.framework */; };
 		0A6A493E051D48B37729058C /* Pods_viewsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C885579142CCA5AD25EE52 /* Pods_viewsTests.framework */; };
 		52207C771FBB06FF00F783F6 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52207C761FBB06FF00F783F6 /* FileManager.swift */; };
+		52207C791FBB2FE400F783F6 /* CoreSpotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52207C781FBB2FE400F783F6 /* CoreSpotlight.framework */; };
+		52207C7B1FBB30DC00F783F6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52207C7A1FBB30DC00F783F6 /* MobileCoreServices.framework */; };
 		5255EB291FA34169009A2AA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255EB281FA34169009A2AA2 /* AppDelegate.swift */; };
 		5255EB2E1FA34169009A2AA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5255EB2C1FA34169009A2AA2 /* Main.storyboard */; };
 		5255EB311FA34169009A2AA2 /* views.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5255EB2F1FA34169009A2AA2 /* views.xcdatamodeld */; };
@@ -56,6 +58,8 @@
 		2B6698AC6766B0A5BC49B929 /* Pods-CardsKeeperUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardsKeeperUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardsKeeperUITests/Pods-CardsKeeperUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		35F8AC8386D01E24AF16B8C1 /* Pods-CardsKeeper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardsKeeper.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardsKeeper/Pods-CardsKeeper.release.xcconfig"; sourceTree = "<group>"; };
 		52207C761FBB06FF00F783F6 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		52207C781FBB2FE400F783F6 /* CoreSpotlight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreSpotlight.framework; path = System/Library/Frameworks/CoreSpotlight.framework; sourceTree = SDKROOT; };
+		52207C7A1FBB30DC00F783F6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		5255EB251FA34169009A2AA2 /* CardsKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardsKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5255EB281FA34169009A2AA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5255EB2D1FA34169009A2AA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52207C7B1FBB30DC00F783F6 /* MobileCoreServices.framework in Frameworks */,
+				52207C791FBB2FE400F783F6 /* CoreSpotlight.framework in Frameworks */,
 				D56EAEF721F3409255401A13 /* Pods_CardsKeeper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,6 +214,8 @@
 		CB4821D6D0ED8041266943C0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52207C7A1FBB30DC00F783F6 /* MobileCoreServices.framework */,
+				52207C781FBB2FE400F783F6 /* CoreSpotlight.framework */,
 				52CF94761FB5E6AE005E7CAC /* WDImagePicker.framework */,
 				52CF94741FB5C6D5005E7CAC /* TOCropViewController.framework */,
 				1A9DAFC23DB9E84FDB3F2030 /* Pods_views.framework */,

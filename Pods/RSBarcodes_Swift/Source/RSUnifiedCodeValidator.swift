@@ -37,8 +37,7 @@ open class RSUnifiedCodeValidator {
             barCodeImage = RSUnifiedCodeGenerator.shared.generateCode(barCode, machineReadableCodeObjectType: AVMetadataObject.ObjectType.code39.rawValue)
             return barCodeImage!
         } else {
-            return barCodeImage!
-            
+            return UIImage(named: "placeholder.gif")!
         }
     }
     

@@ -8,13 +8,34 @@
 
 import UIKit
 import CoreData
+import CoreSpotlight
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    //var main: ViewController?
+  
+    
+    
+    
+ func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
+        let viewController = window?.rootViewController as! ViewController
+        viewController.restoreUserActivityState(userActivity)
+        
+        return true
+    }
+    
+//    private func application(application: UIApplication, continueUserActivity userActivity: NSUserActivity, restorationHandler: @escaping ([AnyObject]?) -> Void) -> Bool {
+//        if userActivity.activityType == CSSearchableItemActionType {
+//            window?.rootViewController = main
+//            main?.restoreUserActivityState(userActivity)
+//        }
+//
+//        return true
+//    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true

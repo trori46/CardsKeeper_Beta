@@ -10,8 +10,10 @@ import Foundation
 import CoreData
 
 class ManagerCards {
-var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    
+    var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+   
     func saveObject(title: String, description: String, created: Date, cardFrontImage: String, cardBackImage: String, barCode: String, filter: String) {
         let newCard = Card(context: context)
         newCard.title = title
@@ -29,6 +31,7 @@ var context = (UIApplication.shared.delegate as! AppDelegate).persistentContaine
             print(error)
         }
     }
+    
     func updateObject(card :Card, title: String, description: String, created: Date, cardFrontImage: String, cardBackImage: String, barCode: String, filter: String) {
         card.title = title
         card.descriptionCard  = description

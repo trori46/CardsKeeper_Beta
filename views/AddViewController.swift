@@ -35,6 +35,9 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
 
         }
     
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        
+    }
     
     var imagePicker = UIImagePickerController()
     @IBOutlet weak var segment: UISegmentedControl!
@@ -95,13 +98,14 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
         self.present(imagePicker, animated: true, completion: nil)
     }
     
+   
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         picker.dismiss(animated: true, completion: nil)
         //You will get cropped image here..
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage
         {
-            
+           
             let shittyVC = ShittyImageCropVC(frame: (self.view.frame), image: image, aspectWidth: 5, aspectHeight: 3)
             self.present(shittyVC, animated: true, completion: nil)
            shittyVC.delegate = self
@@ -170,6 +174,7 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
     roundButton.layer.cornerRadius = 10
         roundButton1.layer.cornerRadius = 10
         fronImage.layer.masksToBounds = true
@@ -189,7 +194,15 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
         // Do any additional setup after loading the view.
 //        choose()
     }
-
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AddViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
