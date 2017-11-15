@@ -139,6 +139,43 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		52207C7E1FBC74F500F783F6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				524E4D351FB36BDC0046FBD4 /* PageView */,
+				52A74A1A1FA4DD4500D6987B /* MyTableViewCell.swift */,
+				52CF94791FB5EE5A005E7CAC /* ShittyImageCropVC.swift */,
+				52B8A35E1FA35421003B3E5C /* AddViewController.swift */,
+				52DBB0C31FB4B3E000DE53D8 /* Popover.swift */,
+				52B8A3601FA359D9003B3E5C /* CardsList.swift */,
+				52B381471FBA0FFF00D68518 /* Authorization.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		52207C7F1FBC752A00F783F6 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				5255EB2F1FA34169009A2AA2 /* views.xcdatamodeld */,
+				5282B35D1FAC78D4005E07F4 /* Card+CoreDataClass.swift */,
+				52A74A1E1FA730D400D6987B /* ManagerCards.swift */,
+				52207C761FBB06FF00F783F6 /* FileManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		52207C801FBC754B00F783F6 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				5255EB341FA34169009A2AA2 /* LaunchScreen.storyboard */,
+				52B381451FBA0CC400D68518 /* placeholder.gif */,
+				5255EB321FA34169009A2AA2 /* Assets.xcassets */,
+				5255EB2C1FA34169009A2AA2 /* Main.storyboard */,
+				5255EB281FA34169009A2AA2 /* AppDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		524E4D351FB36BDC0046FBD4 /* PageView */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,23 +209,10 @@
 		5255EB271FA34169009A2AA2 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				5282B35D1FAC78D4005E07F4 /* Card+CoreDataClass.swift */,
-				5255EB281FA34169009A2AA2 /* AppDelegate.swift */,
-				5255EB2C1FA34169009A2AA2 /* Main.storyboard */,
-				5255EB321FA34169009A2AA2 /* Assets.xcassets */,
-				52B381451FBA0CC400D68518 /* placeholder.gif */,
-				5255EB341FA34169009A2AA2 /* LaunchScreen.storyboard */,
 				5255EB371FA34169009A2AA2 /* Info.plist */,
-				5255EB2F1FA34169009A2AA2 /* views.xcdatamodeld */,
-				52B8A35E1FA35421003B3E5C /* AddViewController.swift */,
-				52B8A3601FA359D9003B3E5C /* CardsList.swift */,
-				52A74A1A1FA4DD4500D6987B /* MyTableViewCell.swift */,
-				52A74A1E1FA730D400D6987B /* ManagerCards.swift */,
-				52DBB0C31FB4B3E000DE53D8 /* Popover.swift */,
-				52CF94791FB5EE5A005E7CAC /* ShittyImageCropVC.swift */,
-				524E4D351FB36BDC0046FBD4 /* PageView */,
-				52B381471FBA0FFF00D68518 /* Authorization.swift */,
-				52207C761FBB06FF00F783F6 /* FileManager.swift */,
+				52207C801FBC754B00F783F6 /* SupportingFiles */,
+				52207C7F1FBC752A00F783F6 /* Managers */,
+				52207C7E1FBC74F500F783F6 /* Views */,
 			);
 			path = views;
 			sourceTree = "<group>";
