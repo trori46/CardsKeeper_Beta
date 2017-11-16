@@ -361,7 +361,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
          let share =  UIContextualAction(style: .normal, title: "", handler: { (action,view,completionHandler ) in
             let card = self.cardArray[indexPath.row]
-            let activityVc = UIActivityViewController(activityItems: [card.title, card.descriptionCard, self.fileManager.loadImageFromPath(date: card.created, count: 1)!], applicationActivities: nil)
+            let activityVc = UIActivityViewController(activityItems: [card.title, card.descriptionCard, self.fileManager.loadImageFromPath(date: card.created, count: 1)!, self.fileManager.loadImageFromPath(date: card.created, count: 2)!, self.fileManager.loadImageFromPath(date: card.created, count: 3)!], applicationActivities: nil)
             activityVc.popoverPresentationController?.sourceView = self.view
 
             self.present(activityVc, animated: true, completion: nil)

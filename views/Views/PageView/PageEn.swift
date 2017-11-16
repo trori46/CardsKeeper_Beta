@@ -32,7 +32,7 @@ class pageenabled: UIViewController,UIScrollViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        scrollView = UIScrollView(frame: CGRect(x: 0, y: 60, width: self.view.frame.width, height: UIScreen.main.bounds.height - 100))
+        scrollView = UIScrollView(frame: CGRect(x: 0, y: 63, width: self.view.frame.width, height: UIScreen.main.bounds.height - 108))
  
         configurePageControl()
 
@@ -50,7 +50,7 @@ class pageenabled: UIViewController,UIScrollViewDelegate
             let myImageView:UIImageView = UIImageView()
             myImageView.transform = myImageView.transform.rotated(by: CGFloat((Double.pi / 2) * -1))
             myImageView.image = fileManager.loadImageFromPath(date: (cardArray?.created)!, count: i+1)
-            myImageView.contentMode = UIViewContentMode.scaleAspectFit
+            //myImageView.contentMode = UIViewContentMode.scaleAspectFit
             myImageView.frame = frame
             
             scrollView.addSubview(myImageView)

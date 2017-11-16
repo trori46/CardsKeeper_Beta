@@ -174,6 +174,7 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.hideKeyboardWhenTappedAround()
     roundButton.layer.cornerRadius = 10
         roundButton1.layer.cornerRadius = 10
@@ -208,7 +209,7 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
         // Dispose of any resources that can be recreated.
     }
     
-
+   
 
 
 }
