@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -64,21 +64,21 @@
 		1034651CCF0D735085B16F5F7176761D /* RSITFGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSITFGenerator.swift; path = Source/RSITFGenerator.swift; sourceTree = "<group>"; };
 		1083B0DB2FA1A1774D7E504EE647B9B6 /* Pods-CardsKeeperTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CardsKeeperTests-dummy.m"; sourceTree = "<group>"; };
 		149A813FCA88DF5031E8399B794FEE87 /* RSExtendedCode39Generator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSExtendedCode39Generator.swift; path = Source/RSExtendedCode39Generator.swift; sourceTree = "<group>"; };
-		176439208705131E84E881877CF845CF /* RSBarcodes_Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = RSBarcodes_Swift.modulemap; sourceTree = "<group>"; };
+		176439208705131E84E881877CF845CF /* RSBarcodes_Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = RSBarcodes_Swift.modulemap; sourceTree = "<group>"; };
 		1BB9036960B6746086918BDA0F0BF469 /* RSFocusMarkLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSFocusMarkLayer.swift; path = Source/RSFocusMarkLayer.swift; sourceTree = "<group>"; };
-		205BEE7A74A84ACCD8227FD1EA1EB2BC /* Pods-CardsKeeper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CardsKeeper.modulemap"; sourceTree = "<group>"; };
+		205BEE7A74A84ACCD8227FD1EA1EB2BC /* Pods-CardsKeeper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CardsKeeper.modulemap"; sourceTree = "<group>"; };
 		211A4A4439F31658FB2FCBA4CA6233FA /* RSUnifiedCodeGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSUnifiedCodeGenerator.swift; path = Source/RSUnifiedCodeGenerator.swift; sourceTree = "<group>"; };
 		2494E1B4DFC92D11AA1A1C4C1FF2A84E /* Pods-CardsKeeperUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CardsKeeperUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		26D1B77DD4B939480DA7DE8DAB7D56EC /* RSEANGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSEANGenerator.swift; path = Source/RSEANGenerator.swift; sourceTree = "<group>"; };
 		3076DBD013D651F49C8B3CE8A0F9861C /* Pods-CardsKeeper-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CardsKeeper-acknowledgements.markdown"; sourceTree = "<group>"; };
 		33FE9747E3545BA86AB773E9858C2560 /* Pods-CardsKeeperTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CardsKeeperTests-umbrella.h"; sourceTree = "<group>"; };
-		381A38FF88E7FDB0EB95AF26A6420C14 /* Pods_CardsKeeperUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CardsKeeperUITests.framework; path = "Pods-CardsKeeperUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		381A38FF88E7FDB0EB95AF26A6420C14 /* Pods_CardsKeeperUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardsKeeperUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3918EDF43CB3190A77CC92E8CD4BA4CF /* Pods-CardsKeeperUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CardsKeeperUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3E2AC48763DF658EDB90C9E6DCF98600 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreImage.framework; sourceTree = DEVELOPER_DIR; };
 		48861A4324D392421E068D4811581D68 /* Pods-CardsKeeper-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CardsKeeper-resources.sh"; sourceTree = "<group>"; };
 		4EA2539268B2757B5FD21C3D60A16755 /* RSCornersLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSCornersLayer.swift; path = Source/RSCornersLayer.swift; sourceTree = "<group>"; };
 		50EEBD47BEFBFB707A69D20C1F7A0513 /* ContextMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ContextMaker.h; path = Source/ContextMaker.h; sourceTree = "<group>"; };
-		558C4F814D96D061430EB7F204EEFA51 /* Pods_CardsKeeper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CardsKeeper.framework; path = "Pods-CardsKeeper.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		558C4F814D96D061430EB7F204EEFA51 /* Pods_CardsKeeper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardsKeeper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5682F90F107B08DD864A95CD78ED2488 /* Pods-CardsKeeper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CardsKeeper-umbrella.h"; sourceTree = "<group>"; };
 		67204A5CBE6185E80201F150DA6F8321 /* RSCode128Generator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSCode128Generator.swift; path = Source/RSCode128Generator.swift; sourceTree = "<group>"; };
 		6ADBA663BB819ACCD90BDBBD6F53065A /* Pods-CardsKeeper-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CardsKeeper-frameworks.sh"; sourceTree = "<group>"; };
@@ -99,9 +99,9 @@
 		8BF4F55DDA3B108CF99F929F69CF6FCC /* Pods-CardsKeeperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CardsKeeperTests.release.xcconfig"; sourceTree = "<group>"; };
 		8FE081E7D80BDD23D41C20AA1DE1890D /* RSITF14Generator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSITF14Generator.swift; path = Source/RSITF14Generator.swift; sourceTree = "<group>"; };
 		925814B336B76F0C40F89C28BF164FB0 /* StringExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = Source/StringExtension.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		946C0D5F57AE51273DD2C8EE03C43791 /* Pods-CardsKeeperUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CardsKeeperUITests-frameworks.sh"; sourceTree = "<group>"; };
-		985007A7C52D0527D280BDA3938EBC37 /* Pods-CardsKeeperUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CardsKeeperUITests.modulemap"; sourceTree = "<group>"; };
+		985007A7C52D0527D280BDA3938EBC37 /* Pods-CardsKeeperUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CardsKeeperUITests.modulemap"; sourceTree = "<group>"; };
 		999043AF87B43012E4800A23A0A5D03F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99BB3D0F96B02165E55A36D8CEFCEE9F /* RSBarcodes_Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RSBarcodes_Swift-prefix.pch"; sourceTree = "<group>"; };
 		9A6E695EDA5D5C383D40B07331DFB6E9 /* RSBarcodes_Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RSBarcodes_Swift-umbrella.h"; sourceTree = "<group>"; };
@@ -112,16 +112,16 @@
 		B234D69C06780CC5C538268A112DB555 /* RSBarcodes_Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RSBarcodes_Swift.xcconfig; sourceTree = "<group>"; };
 		B8D3BFC1660D3DBFBADE6F6930762AA2 /* Pods-CardsKeeperUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CardsKeeperUITests-resources.sh"; sourceTree = "<group>"; };
 		B94222D46AC5D00B4845632BA522305A /* RSCodeGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSCodeGenerator.swift; path = Source/RSCodeGenerator.swift; sourceTree = "<group>"; };
-		BC11DB0B6F8AA4CFF6A6A6767D57E3D3 /* RSBarcodes_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RSBarcodes_Swift.framework; path = RSBarcodes_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC11DB0B6F8AA4CFF6A6A6767D57E3D3 /* RSBarcodes_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RSBarcodes_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC6313741E19B5BE56C06F5621A8080D /* RSBarcodes_Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RSBarcodes_Swift-dummy.m"; sourceTree = "<group>"; };
-		C978C258C661564629A1F5CE997EE31F /* Pods-CardsKeeperTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CardsKeeperTests.modulemap"; sourceTree = "<group>"; };
+		C978C258C661564629A1F5CE997EE31F /* Pods-CardsKeeperTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CardsKeeperTests.modulemap"; sourceTree = "<group>"; };
 		D39D50EF4528AC595ABC2A95980C0ED2 /* Pods-CardsKeeperTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CardsKeeperTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		D4300393782ED081C49DE97B5ADA5E51 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5A21D7041BD2372F810489C767B941F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		E5DAFBBEC2463BD3399EADF5E70CBA96 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF3F771EED83DE494C4A74225B068F5C /* RSCode93Generator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSCode93Generator.swift; path = Source/RSCode93Generator.swift; sourceTree = "<group>"; };
 		F3DFB48D4CCFAF53F47F9E8C54844134 /* Pods-CardsKeeperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CardsKeeperTests.debug.xcconfig"; sourceTree = "<group>"; };
-		F7344BBAFC615597DBCC2DF1B328AD26 /* Pods_CardsKeeperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CardsKeeperTests.framework; path = "Pods-CardsKeeperTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7344BBAFC615597DBCC2DF1B328AD26 /* Pods_CardsKeeperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardsKeeperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F801926EA6752E85805FEAC49581BDBA /* Pods-CardsKeeperUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CardsKeeperUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FB178157B326CED1F227A0FEA31921E2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -208,7 +208,6 @@
 				7330F14BF0CD6106566F319BE38004F5 /* UIColorExtension.swift */,
 				B6503422038CB434F698C91AB51D39B7 /* Support Files */,
 			);
-			name = RSBarcodes_Swift;
 			path = RSBarcodes_Swift;
 			sourceTree = "<group>";
 		};
@@ -439,7 +438,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0910;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -678,6 +677,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;

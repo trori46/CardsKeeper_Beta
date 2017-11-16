@@ -97,38 +97,22 @@
             endingLineNumber = "24"
             landmarkName = "application(_:continue:restorationHandler:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CardsKeeper.AppDelegate.application(__ObjC.UIApplication, continue: __ObjC.NSUserActivity, restorationHandler: (Swift.Optional&lt;Swift.Array&lt;Any&gt;&gt;) -&gt; ()) -&gt; Swift.Bool"
-                  moduleName = "CardsKeeper"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Applications/CardsKeeper2/views/AppDelegate.swift"
-                  timestampString = "532441414.46018"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CardsKeeper.AppDelegate.application(__ObjC.UIApplication, continue: __ObjC.NSUserActivity, restorationHandler: (Swift.Optional&lt;Swift.Array&lt;Any&gt;&gt;) -&gt; ()) -&gt; Swift.Bool"
-                  moduleName = "CardsKeeper"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Applications/CardsKeeper2/views/AppDelegate.swift"
-                  timestampString = "532441414.462356"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "372">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "views/Views/CardsList.swift"
+            timestampString = "532528328.679305"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "initSearchableItems()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

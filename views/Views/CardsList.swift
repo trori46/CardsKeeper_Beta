@@ -67,7 +67,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func navigateToAuthenticatedViewController(){
         DispatchQueue.main.async() {
-            self.initSearchableItems()
+            //self.initSearchableItems()
             self.tableView.dataSource = self
             self.tableView.delegate = self
         
@@ -78,6 +78,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 self.cardArray = self.cardsManager.fetchData(filter: self.filter)
         }
         self.tableView.reloadData()
+            self.initSearchableItems()
             print(self.cardArray)
             self.tableView.estimatedRowHeight = 106
             
@@ -181,8 +182,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         case LAError.systemCancel.rawValue:
             message = "Authentication was cancelled by the system"
 
-            //        case LAError.touchIDLockout.rawValue:
-            //            message = "Too many failed attempts."
+            case LAError.touchIDLockout.rawValue:
+                        message = "Too many failed attempts."
             //
             //        case LAError.touchIDNotAvailable.rawValue:
             //            message = "TouchID is not available on the device"
@@ -220,13 +221,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     }
 
-    /**
-     This method presents an UIAlertViewController to the user.
-     
-     - parameter title:  The title for the UIAlertViewController.
-     - parameter message:The message for the UIAlertViewController.
-     
-//     */
+  
     func showAlertWithTitle( title:String, message:String ) {
 
         let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -305,8 +300,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
             let controller = segue.destination as! pageenabled
             controller.cardArray = cardArray[songId!]
-//            let detailController = segue.destination as? pageenabled
-//            detailController?.cardArray = sender as? Card
+
         } else if (segue.identifier == "popover"){
             let des = segue.destination as! Popover
             des.delegate = self
@@ -315,15 +309,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let editingController = segue.destination as? AddViewController
             editingController?.cardEditting = sender as! Card?
         }
-//        } else {
-//            if let index = tableView.indexPathForSelectedRow?.row {
-//            Id = index
-//        } else {
-//            Id = searchedSongIdentifier
-//        }
-//            let controller = segue.destination as! pageenabled
-//        controller.cardArray = cardArray[Id!]
-//        }
+
     }
     
     
