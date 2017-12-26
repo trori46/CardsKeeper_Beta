@@ -2,7 +2,6 @@ import UIKit
 import LocalAuthentication
 
 class AuthenticationViewController: UIViewController {
-  
     
     /**
      This method gets called when the users clicks on the
@@ -10,6 +9,13 @@ class AuthenticationViewController: UIViewController {
      
      - parameter sender: a reference to the button that has been touched
      */
+    
+    
+    
+    @IBAction func logIn(_ sender: UIButton) {
+        authenticateUser()
+    }
+    
      func  authenticateUser() {
         
         // 1. Create a authentication context
@@ -38,7 +44,7 @@ class AuthenticationViewController: UIViewController {
                     self.navigateToAuthenticatedViewController()
                     
                 }else {
-                    
+                    self.password()
                     // Check if there is an error
                     if let error = error {
                         
@@ -52,7 +58,29 @@ class AuthenticationViewController: UIViewController {
         })
         
     }
-
+    
+    
+    func password(){
+        let password = "123"
+        let alertController = UIAlertController(title: "Password", message: "Please enter a password", preferredStyle: .alert)
+        DispatchQueue.main.async {
+            alertController.addTextField { (textfield) in
+                textfield.text = ""
+                textfield.isSecureTextEntry = true}
+        }
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (alert: UIAlertAction) in exit(0)}))
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler:{ (alert: UIAlertAction) in
+            let passwordADD = alertController.textFields![0]
+            if  password == passwordADD.text {
+                self.navigateToAuthenticatedViewController()
+            }else {
+                exit(0)
+            }
+        }))
+        DispatchQueue.main.async {
+             self.present(alertController, animated: true, completion: nil)
+        }
+    }
     
     /**
      This method will present an UIAlertViewController to inform the user that the device has not a TouchID sensor.
@@ -60,7 +88,7 @@ class AuthenticationViewController: UIViewController {
     func showAlertViewIfNoBiometricSensorHasBeenDetected(){
         
        //showAlertWithTitle(title: "Error", message: "This device does not have a TouchID sensor.")
-        navigateToAuthenticatedViewController()
+        password()
         
     }
     
@@ -133,9 +161,11 @@ class AuthenticationViewController: UIViewController {
             message = "The user did cancel"
             
         case LAError.userFallback.rawValue:
+            password()
             message = "The user chose to use the fallback"
             
         default:
+            password()
             message = "Did not find error code on LAError object"
             
         }
@@ -148,8 +178,8 @@ class AuthenticationViewController: UIViewController {
      This method will push the authenticated view controller onto the UINavigationController stack
      */
     func navigateToAuthenticatedViewController(){
-    
-        
+        isLog = true
+        dismiss(animated: true, completion: nil)
     }
     
 }
